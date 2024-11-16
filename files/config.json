@@ -7,5 +7,5 @@
   "ipv6_only": false,
   "dns": "cloudflare",
   "dns_cache_size": 0,
-  "password": "19021985"
+  "password": "19021985" // тут какойто пароль
 }
