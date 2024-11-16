@@ -1,0 +1,20 @@
+- name: install make
+  apt:
+    name: make
+    state: present
+    update_cache: yes
+- name: Create dirr
+  file:
+    path="{{ work_dirr }}"
+    state=directory
+- name: Copy files
+  copy:
+    src: "../files/{{ item }}"
+    dest: "{{ work_dirr }}"
+    owner: root
+    group: root
+    mode: 0644
+  loop:
+    - config.json
+    - Makefile
+    - Dockerfile

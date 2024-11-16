@@ -1,0 +1,13 @@
+---
+- name: run container
+  hosts: server
+  gather_facts: no
+  vars_files:
+    - ../external_vars.yml
+  tasks:
+  - name: run docker images
+    ansible.builtin.shell:
+      cmd: make run
+      chdir: "{{ work_dirr }}"
+    register: out
+  - debug: msg="{{ out.stdout }}"

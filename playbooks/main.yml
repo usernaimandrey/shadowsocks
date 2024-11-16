@@ -1,0 +1,15 @@
+---
+- hosts: server
+  gather_facts: no
+  vars_files:
+    - external_vars.yml
+  tasks:
+  - name: update sistem
+    ansible.builtin.import_tasks:
+      file: update_system.yml
+  - name: install docker
+    ansible.builtin.import_tasks:
+      file: install_docker.yml
+  - name: setup shadowsocks
+    ansible.builtin.import_tasks:
+      file: setup_shadowsocks.yml
