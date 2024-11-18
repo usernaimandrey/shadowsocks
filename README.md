@@ -2,7 +2,7 @@
 
 1. Устанавить [pip](https://pip.pypa.io/en/stable/installation/) и [ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 
-2. Отредактировать файл инвентаризации `inventory.ini`, прописав туда ip адрес удаленного сервере
+2. Отредактировать файл инвентаризации `inventory.ini`, прописав туда ip адрес удаленного сервера
 
 3. Отредактировать файл `/files/config.json`
 
